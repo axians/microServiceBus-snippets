@@ -1,0 +1,23 @@
+{
+  "name": "microservicebus-snippets",
+  "version": "1.0.0",
+  "publisher":"microServiceBus",
+  "description": "VS Code snippets for working with microServiceBus.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axians/microServiceBus-snippets.git"
+  },
+  "keywords": [
+    "microServiceBus"
+  ],
+  "author": "patrik.sohlman@axians.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axians/microServiceBus-snippets/issues"
+  },
+  "homepage": "https://github.com/axians/microServiceBus-snippets#readme"
+}
