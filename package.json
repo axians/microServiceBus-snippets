@@ -1,27 +1,33 @@
 {
-  "name": "microservicebus-snippets",
-  "version": "1.0.2",
-  "publisher":"microServiceBus",
-  "engines":{
-    "vscode": "^0.10.0"
-  },
-  "icon":"img/npmLogo.png",
-  "description": "VS Code snippets for working with microServiceBus.com",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/axians/microServiceBus-snippets.git"
-  },
-  "keywords": [
-    "microServiceBus"
-  ],
-  "author": "patrik.sohlman@axians.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/axians/microServiceBus-snippets/issues"
-  },
-  "homepage": "https://github.com/axians/microServiceBus-snippets#readme"
+    "name": "microServiceBus-snippets",
+    "displayName": "microServiceBus.com - code snippets",
+    "description": "VS Code snippets for working with microServiceBus.com",
+    "version": "1.0.4",
+    "publisher": "microServiceBus",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "galleryBanner": {
+        "color": "#C80000",
+        "theme": "dark"
+    },
+    "icon": "images/npmLogo.png",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/axians/microServiceBus-snippets.git"
+    },
+    "keywords": [
+        "microServiceBus","AXIANS", "VINCI"
+    ]
 }
