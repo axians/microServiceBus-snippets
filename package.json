@@ -1,7 +1,11 @@
 {
   "name": "microservicebus-snippets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher":"microServiceBus",
+  "engines":{
+    "vscode": "^0.10.0"
+  },
+  "icon":"img/npmLogo.png",
   "description": "VS Code snippets for working with microServiceBus.com",
   "main": "index.js",
   "scripts": {
