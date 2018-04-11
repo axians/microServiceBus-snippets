@@ -1,0 +1,105 @@
+{
+    "static property":{
+		"prefix": "_staticprop",
+		"body":[
+			"let $1 = this.GetPropertyValue('static', '$1');",
+			""
+		],
+		"description": "Fetches a static property value" 
+	},
+	"general property":{
+		"prefix": "_generalprop",
+		"body":[
+			"let $1 = this.GetPropertyValue('general', '$1');",
+			""
+		],
+		"description": "Fetches a general property"
+	},
+	"security property":{
+		"prefix": "_securityprop",
+		"body":[
+			"let $1 = this.GetPropertyValue('security', '$1');",
+			""
+		],
+		"description": "Fetches a security property"
+	},
+
+	"Debug":{
+		"prefix": "_debug",
+		"body":[ "self.Debug('$1');",
+				 ""
+		],
+		"description": "Log to the console"
+	},
+	"Throw":{
+		"prefix": "_throwError",
+		"body":[ "self.ThrowError(${1:context}, '${2:errorNo}', '${3:description}');",
+				 ""
+		]
+	},
+	"Submit response message":{
+		"prefix": "_submitResponse",
+		"body":[ "self.SubmitResponseMessage(${1:msg}, ${2:context}, 'application/json');",
+		""
+		],
+		"description": "Submits a response message"
+	},
+	"Submit message":{
+		"prefix": "_submitMessage",
+		"body":[ "self.SubmitMessage(${1:msg}, 'application/json', ${2:variables});",
+		""
+		],
+		"description": "Submits a message"
+	},
+	"Add npm Package":{
+		"prefix": "_addnpmPackage",
+		"body":[
+			"self.AddNpmPackage('${1:npmPackage}', true, function(err){",
+			"	if(!err){",
+			"		${2:packageVariable} = require('$1');",
+            "	}",
+            "	else{",
+            "		self.ThrowError(null, '00001', 'Unable to install the npmPackage $1');",
+            "		return;",
+            "	}",
+			"});",
+			"",
+		],
+		"description": "Adds a npm package" 
+	},
+	"Create new service" : {
+		"prefix": "_newService",
+		"body": [	
+			"var timerEvent;",
+			"var self;",
+			"",
+			"var exports = module.exports = {",
+
+    		"	Start : function () {",
+        	"		self = this;",
+			"		$0",
+        	"		timerEvent = setInterval(function () {",
+			"",	 
+			"			let payload = {",
+            "				someRandomValue : Math.random()", 
+			"			};",
+			"",
+            "			// Submit payload to host.",
+            "			self.SubmitMessage(payload);",
+        	"		}, 10000);",
+			"	},",
+			"", 
+    		"	Stop : function () {",
+        	"		self.Debug('The Stop method is called.');",
+        	"		// Stop the timerEvent",
+        	"		clearInterval(timerEvent);",
+    		"	},",    	
+			"",
+    		"	Process : function (message, context) {",
+			"",	
+    		"	},",    
+			"}"
+		],
+		"description": "Creates a empty service"
+	}
+}
