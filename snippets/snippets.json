@@ -101,5 +101,21 @@
 			"}"
 		],
 		"description": "Creates a empty service"
+	},
+	"Get current state":{
+		"prefix": "_getCurrentState",
+		"body":[
+			"let state = self.GetCurrentState();"
+		],
+		"description": "Receives the current device/twin state" 
+	},
+	"Get instance of service":{
+		"prefix": "_getInstanceOf",
+		"body":[
+			"self.GetInstanceOf(${1:service}, function(err,instance){",
+			"    //instance.foo();",
+			"});"
+		],
+		"description": "Returns an instance of a service in the same flow" 
 	}
 }
