@@ -2,7 +2,7 @@
     "name": "microServiceBus-snippets",
     "displayName": "microServiceBus.com - code snippets",
     "description": "VS Code snippets for working with microServiceBus.com",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "publisher": "microServiceBus",
     "engines": {
         "vscode": "^1.22.0"

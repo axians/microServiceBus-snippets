@@ -117,5 +117,37 @@
 			"});"
 		],
 		"description": "Returns an instance of a service in the same flow" 
-	}
+	},
+	"Annotate Service": {
+		"prefix": "_annotateService",
+		"body": [
+			"/* #STARTCONFIG",
+			"{",
+			" 	\"config\": {",
+			"		\"staticConfig\": [],",
+			"		\"securityConfig\": []",
+			"	}",
+			"}",
+			"#ENDCONFIG*/"
+		],
+		"description": "Add annotation section"
+	},
+	"Annotate property": {
+		"prefix": "_annotateProperty",
+		"body": [
+			"{",
+			"	\"category\": null,",
+			"	\"id\": \"\",",
+			"	\"order\": 0,",
+			"	\"name\": \"\",",
+			"	\"description\": \"\",",
+			"	\"value\": null,",
+			"	\"type\": \"\",",
+			"	\"mandatory\": false,",
+			"	\"visible\": true,",
+			"	\"acceptableValues\": []",
+			"}"
+		],
+		"description": "Add static or security property annotation"
+	},
 }
